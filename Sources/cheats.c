@@ -77,3 +77,8 @@ void    decrease_money(void)
     update_money_entry();
     disableCheat(g_decrease_menu_index);
 }
+
+void    max_money(void)
+{
+    set_current_money(0x270F);
+}

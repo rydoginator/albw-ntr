@@ -25,5 +25,6 @@ void	update_money_entry(void);
 void    increase_money(void);
 void    decrease_money(void);
 void	health(void);
+void	max_money(void);
 
 #endif
