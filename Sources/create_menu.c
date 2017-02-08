@@ -67,7 +67,7 @@ inline void new_spoiler_with_note(const char *name, const char *note)
 }
 
 
-char    money_level_buffer[40] = "First init";
+char    money_level_buffer[40] = "Current rupees:";
 int     g_increase_menu_index = 0;
 int     g_decrease_menu_index = 0;
 
