@@ -25,6 +25,11 @@ void	update_money_entry(void);
 void    increase_money(void);
 void    decrease_money(void);
 void	health(void);
+void	inf_energy(void);
 void	max_money(void);
+void	max_tails(void);
+void	max_guts(void);
+void	max_horns(void);
+void	max_baby(void);
 
 #endif

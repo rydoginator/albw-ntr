@@ -67,13 +67,12 @@ inline void new_spoiler_with_note(const char *name, const char *note)
 }
 
 
-char    money_level_buffer[40] = "Current rupees:";
+char    money_level_buffer[40] = "Current Rupees:";
 int     g_increase_menu_index = 0;
 int     g_decrease_menu_index = 0;
 
 static inline void  smenu(void)
 {
-    //update_money_entry();
     new_spoiler("Movement Codes");
         new_entry_with_note("Coordinates Modifier", cm_note, coord);
         new_entry_with_note("Moon Jump", moon_note, moon);
@@ -84,9 +83,16 @@ static inline void  smenu(void)
         g_decrease_menu_index = new_entry("- 1", decrease_money);
         new_entry("Max Rupees", max_money);
     exit_spoiler();
-    new_entry("Fill Hearts", health);
-
-
+    new_spoiler("Combat Codes");
+        new_entry("Fill Hearts", health);
+        new_entry("Infinite Energy Gauge", inf_energy);
+    exit_spoiler();
+    new_spoiler("Items Codes");
+        new_entry("Max Monster Tails", max_tails);
+        new_entry("Max Monster Guts", max_guts);
+        new_entry("Max Monster Horns", max_horns);
+        new_entry("Max Miamias", max_baby);
+    exit_spoiler();
 }
 
 /*

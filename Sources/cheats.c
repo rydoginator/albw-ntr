@@ -47,7 +47,7 @@ void    update_money_entry(void)
     u16 current_money;
 
     current_money = get_current_money();
-    xsprintf(money_level_buffer, "Current rupees: %d", current_money);
+    xsprintf(money_level_buffer, "Current Rupees: %d", current_money);
 }
 
 void    increase_money(void)
@@ -81,4 +81,30 @@ void    decrease_money(void)
 void    max_money(void)
 {
     set_current_money(0x270F);
+    update_money_entry();
+}
+
+void	inf_energy(void)
+{
+	WRITEU16(0x168B9FCA, 0x4461);
+}
+
+void	max_tails(void)
+{
+	WRITEU8(0x168B5FB1, 0x63);
+}
+
+void	max_guts(void)
+{
+	WRITEU8(0x168B5FB2, 0x63);
+}
+
+void	max_horns(void)
+{
+	WRITEU8(0x168B5FB3, 0x63);
+}
+
+void	max_baby(void)
+{
+	WRITEU8(0x168B5FB4, 0x64);
 }
