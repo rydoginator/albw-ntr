@@ -112,7 +112,7 @@ void    my_menus(void)
     tid = get_tid_low();
     if (tid == 0xEC300)
     {
-        new_unselectable_entry("Zelda ALBTW Cheats Preview");
+        new_unselectable_entry("Zelda ALBTW Cheats Ver 1.0");
     }
     else
    {
