@@ -88,6 +88,7 @@ static inline void  smenu(void)
         new_entry("Infinite Energy Gauge", inf_energy);
     exit_spoiler();
     new_spoiler("Items Codes");
+        new_entry("Have 5 Keys", max_keys);
         new_entry("Max Monster Tails", max_tails);
         new_entry("Max Monster Guts", max_guts);
         new_entry("Max Monster Horns", max_horns);
@@ -112,11 +113,21 @@ void    my_menus(void)
     tid = get_tid_low();
     if (tid == 0xEC300)
     {
-        new_unselectable_entry("Zelda ALBTW Cheats Ver 1.0");
+        assign_region(USA);
+        new_unselectable_entry("Zelda ALBTW Cheats Ver 1.1 USA");
+    }
+    else if (tid == 0xEC400)
+    {
+        assign_region(EUR);
+        new_unselectable_entry("Zelda ALBTW Cheats Ver 1.1 EUR");        
+    }
+    else if (tid == 0xEC200)
+    {
+        assign_region(JAP);
+        new_unselectable_entry("Zelda ALBTW Cheats Ver 1.1 JAP");        
     }
     else
-   {
-		printf("Current TitleID: %s", get_title_id());	
+   {	
         new_unselectable_entry("You're Using An Unsupported TitleID!");			
         new_unselectable_entry("This plugin does not support");
 		new_unselectable_entry("your copy yet!");
